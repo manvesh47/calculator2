@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="calculator.css">
+    <title>calulator</title>
+    
+    <script>
+    function display(val)
+        {
+            document.getElementById("result").value += val;
+        }
+        
+        function solve() 
+         { 
+             var x = document.getElementById("result").value;
+             var y = eval(x);
+             document.getElementById("result").value = y ;
+         } 
+        
+        function clr() 
+         { 
+             var l=document.getElementById("result").lenght;
+             var ref=document.querySelector("#result");
+             ref.value=ref.value.substr(0,l-1);
+         } 
+    
+    
+    
+    
+    
+    </script>
+</head>
+<body>
+ 
+   <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="result"/></td> 
+           
+             <td><input type="button" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+           
+            <td><input type="button" value="1" onclick="display(this.value);" /> </td> 
+            <td><input type="button" value="2" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="3" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="/" onclick="display(this.value);"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="4" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="5" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="6" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="-" onclick="display(this.value);"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="7" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="8" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="9" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="+" onclick="display(this.value);"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" value="." onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="0" onclick="display(this.value);"/> </td> 
+            <td><input type="button" value="=" onclick="solve();"/> </td> 
+            <td><input type="button" value="*" onclick="display(this.value);"/> </td> 
+         </tr> 
+      </table> 
+    
+</body>
+</html>
